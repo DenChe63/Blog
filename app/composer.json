@@ -47,7 +47,8 @@
         "symfony/maker-bundle": "^1.0",
         "symfony/phpunit-bridge": "^6.0",
         "symfony/stopwatch": "5.0.*",
-        "symfony/web-profiler-bundle": "5.0.*"
+        "symfony/web-profiler-bundle": "5.0.*",
+        "vimeo/psalm": "^4.20"
     },
     "config": {
         "preferred-install": {
