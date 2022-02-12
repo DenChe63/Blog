@@ -15,7 +15,7 @@ class PaginatorService
         $this->postRepository = $postRepository;
     }
 
-    public function paginator(?int $page, ?int $limit): array
+    public function paginator(int $page, int $limit): array
     {
         $pagesCount = ceil(count($this->postRepository->findAll()) / $limit);
         $pages = range(1, $pagesCount);

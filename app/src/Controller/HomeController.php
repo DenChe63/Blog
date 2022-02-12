@@ -22,7 +22,7 @@ class HomeController extends AbstractController
     /**
      * @Route("/", name="app_home")
      */
-    public function index(Request $request): Response
+    public function __invoke (Request $request): Response
     {
         $homePage = $this->paginatorService->paginator($request->query
             ->get('page', 1), $request->query
