@@ -1,8 +1,6 @@
 <?php
 
-
 namespace App;
-
 
 use App\Repository\PostRepository;
 
@@ -13,7 +11,7 @@ class PaginatorService
 
     public function __construct(
         PostRepository $postRepository
-    ){
+    ) {
         $this->postRepository = $postRepository;
     }
 

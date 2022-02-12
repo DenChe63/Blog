@@ -15,7 +15,7 @@ class HomeController extends AbstractController
 
     public function __construct(
         PaginatorService $paginatorService
-    ){
+    ) {
         $this->paginatorService = $paginatorService;
     }
 
@@ -26,7 +26,8 @@ class HomeController extends AbstractController
     {
         $homePage = $this->paginatorService->paginator($request->query
             ->get('page', 1), $request->query
-            ->get('limit', 5));
+            ->get('limit', 5)
+        );
 
         return $this->render('home/index.html.twig', [
             'controller_name' => 'HomeController',
