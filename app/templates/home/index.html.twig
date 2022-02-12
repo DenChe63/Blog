@@ -24,7 +24,7 @@
         </ul>
     {% for page in pages %}
     <tr>
-        <td><a href="{{ path('app_home') }}?page={{ page }}">{{ page }}</a></td>
+        <td><a href="{{ path('app_home') }}?page={{ page }}&limit={{ limit }}">{{ page }}</a></td>
     </tr>
     {% endfor %}
 

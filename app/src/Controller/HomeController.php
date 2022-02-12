@@ -35,6 +35,7 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
             'posts' => $posts,
             'pages' => $pages,
+            'limit' => $limit,
         ]);
     }
 }
