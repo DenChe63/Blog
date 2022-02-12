@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Repository\PostRepository;
+use App\PaginatorService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -10,32 +10,27 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class HomeController extends AbstractController
 {
-    /** @var PostRepository */
-    private $postRepository;
+    /** @var PaginatorService */
+    private $paginatorService;
 
     public function __construct(
-        PostRepository $postRepository
+        PaginatorService $paginatorService
     ){
-        $this->postRepository = $postRepository;
+        $this->paginatorService = $paginatorService;
     }
-
 
     /**
      * @Route("/", name="app_home")
      */
     public function index(Request $request): Response
     {
-        $page = $request->query->get('page', 1);
-        $limit = $request->query->get('limit', 5);
-        $pagesCount = ceil(count($this->postRepository->findAll()) / $limit);
-        $pages = range(1, $pagesCount);
-        $posts = $this->postRepository->findBy([], [], $limit, ($limit * ($page - 1)));
+        $homePage = $this->paginatorService->paginator($request->query
+            ->get('page', 1), $request->query
+            ->get('limit', 5));
 
         return $this->render('home/index.html.twig', [
             'controller_name' => 'HomeController',
-            'posts' => $posts,
-            'pages' => $pages,
-            'limit' => $limit,
+            'homePage' => $homePage,
         ]);
     }
 }

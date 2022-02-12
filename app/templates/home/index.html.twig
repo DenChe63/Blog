@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Здарова HomeController!{% endblock %}
 
 {% block body %}
 <style>
@@ -11,7 +11,7 @@
 <div class="example-wrapper">
     <h1>Здарова {{ controller_name }}! ✅</h1>
         <ul>
-        {% for post in posts %}
+        {% for post in homePage.posts %}
             <tr>
                 <td><h2>{{ post.title }}</h2> </td>
                 <td>{{ post.content }}</td>
@@ -22,9 +22,9 @@
             </tr>
         {% endfor %}
         </ul>
-    {% for page in pages %}
+    {% for page in homePage.pages %}
     <tr>
-        <td><a href="{{ path('app_home') }}?page={{ page }}&limit={{ limit }}">{{ page }}</a></td>
+        <td><a href="{{ path('app_home') }}?page={{ page }}&limit={{ homePage.limit }}">{{ page }}</a></td>
     </tr>
     {% endfor %}
 
