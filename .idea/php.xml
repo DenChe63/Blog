@@ -130,6 +130,18 @@
       <path value="$PROJECT_DIR$/app/vendor/symfony/translation-contracts" />
       <path value="$PROJECT_DIR$/app/vendor/doctrine/data-fixtures" />
       <path value="$PROJECT_DIR$/app/vendor/doctrine/doctrine-fixtures-bundle" />
+      <path value="$PROJECT_DIR$/app/vendor/felixfbecker/language-server-protocol" />
+      <path value="$PROJECT_DIR$/app/vendor/felixfbecker/advanced-json-rpc" />
+      <path value="$PROJECT_DIR$/app/vendor/vimeo/psalm" />
+      <path value="$PROJECT_DIR$/app/vendor/amphp/amp" />
+      <path value="$PROJECT_DIR$/app/vendor/amphp/byte-stream" />
+      <path value="$PROJECT_DIR$/app/vendor/dnoegel/php-xdg-base-dir" />
+      <path value="$PROJECT_DIR$/app/vendor/openlss/lib-array2xml" />
+      <path value="$PROJECT_DIR$/app/vendor/netresearch/jsonmapper" />
+      <path value="$PROJECT_DIR$/app/vendor/webmozart/path-util" />
+      <path value="$PROJECT_DIR$/app/vendor/easycorp/easyadmin-bundle" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/polyfill-uuid" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/uid" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.2" />
@@ -137,5 +149,10 @@
     <phpunit_settings>
       <PhpUnitSettings custom_loader_path="$PROJECT_DIR$/app/vendor/autoload.php" />
     </phpunit_settings>
+  </component>
+  <component name="Psalm">
+    <Psalm_settings>
+      <PsalmConfiguration tool_path="$PROJECT_DIR$/app/vendor/bin/psalm" />
+    </Psalm_settings>
   </component>
 </project>
