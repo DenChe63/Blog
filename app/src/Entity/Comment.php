@@ -23,7 +23,7 @@ class Comment
     private $content;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Post::class, inversedBy="comments")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Post", inversedBy="comments")
      * @ORM\JoinColumn(nullable=false)
      */
     private $post;

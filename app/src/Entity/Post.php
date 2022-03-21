@@ -30,7 +30,7 @@ class Post
     private $content;
 
     /**
-     * @ORM\OneToMany(targetEntity=Comment::class, mappedBy="post", orphanRemoval=true)
+     * @ORM\OneToMany(targetEntity="App\Entity\Comment", mappedBy="post", orphanRemoval=true)
      */
     private $comments;
 

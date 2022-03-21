@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Здарова HomeController!{% endblock %}
 
 {% block body %}
 <style>
@@ -9,12 +9,24 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <h1>Здарова {{ controller_name }}! ✅</h1>
+        <ul>
+        {% for post in homePage.posts %}
+            <tr>
+                <td><h2>{{ post.title }}</h2> </td>
+                <td>{{ post.content }}</td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </ul>
+    {% for page in homePage.pages %}
+    <tr>
+        <td><a href="{{ path('app_home') }}?page={{ page }}&limit={{ homePage.limit }}">{{ page }}</a></td>
+    </tr>
+    {% endfor %}
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/home/che/sites/my_project6/src/Controller/HomeController.php'|file_link(0) }}">src/Controller/HomeController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/home/che/sites/my_project6/templates/home/index.html.twig'|file_link(0) }}">templates/home/index.html.twig</a></code></li>
-    </ul>
 </div>
 {% endblock %}
