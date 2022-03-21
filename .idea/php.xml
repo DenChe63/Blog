@@ -139,6 +139,9 @@
       <path value="$PROJECT_DIR$/app/vendor/openlss/lib-array2xml" />
       <path value="$PROJECT_DIR$/app/vendor/netresearch/jsonmapper" />
       <path value="$PROJECT_DIR$/app/vendor/webmozart/path-util" />
+      <path value="$PROJECT_DIR$/app/vendor/easycorp/easyadmin-bundle" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/polyfill-uuid" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/uid" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.2" />
